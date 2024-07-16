@@ -12,6 +12,7 @@ import docker from "@/public/assets/tech/docker.png";
 import flutter from "@/public/assets/tech/flutter.png";
 import phaserjs from "@/public/assets/tech/phaserjs.png";
 import zustand from "@/public/assets/tech/zustand.png";
+import mern from "@/public/assets/tech/mern.png";
 import figma from "@/public/assets/tech/figma.png";
 import reactjs from "@/public/assets/tech/reactjs.png";
 import threejs from "@/public/assets/tech/threejs.svg";
@@ -62,37 +63,12 @@ const services = [
 
 const technologies = [
   {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
+    name: "MERN",
+    icon: mern,
   },
   {
     name: "Three JS",
     icon: threejs,
-  },
-
-  {
-    name: "figma",
-    icon: figma,
   },
   {
     name: "docker",
@@ -101,10 +77,6 @@ const technologies = [
   {
     name: "flutter",
     icon: flutter,
-  },
-  {
-    name: "zustand",
-    icon: zustand,
   },
   {
     name: "phaserjs",

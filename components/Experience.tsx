@@ -14,7 +14,7 @@ type prop = {
 
 const ExperienceCard: React.FC<prop> = ({ experience }) => {
   return (
-    <section className="flex gap-y-10 items-center justify-start my-4 bg-[#1d1836] p-10 border-b-[3px] border-white">
+    <section className="flex flex-col md:flex-row gap-y-10 items-center justify-start my-4 bg-[#1d1836] p-10 border-b-[3px] border-white">
       <Image
         src={experience.icon}
         alt={experience.company_name}
