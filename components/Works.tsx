@@ -1,6 +1,5 @@
 "use client";
 
-import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "@/app/style";
 import github from "@/public/assets/github.png";
@@ -8,9 +7,8 @@ import live_globe from "@/public/assets/live_globe.png";
 import SectionWrapper from "@/hoc/SectionWrapper";
 import { projects } from "@/constants";
 import { fadeIn, textVariant } from "@/utils/motion";
-import Image, { StaticImageData } from "next/image";
+import { StaticImageData } from "next/image";
 import { useEffect, useState } from "react";
-import ShortPreview from "./ShortPreview";
 import ProjectsDesktopView from "./ProjectsDesktopView";
 import ProjectsMobileView from "./ProjectsMobileView";
 
@@ -54,7 +52,7 @@ const ProjectCard: React.FC<ProjectCardProp> = ({
 
       return () => window.removeEventListener("resize", handleResize);
     }
-  }, [window]);
+  }, []);
 
   return (
     <motion.div
