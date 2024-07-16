@@ -11,7 +11,6 @@ import { fadeIn, textVariant } from "@/utils/motion";
 import Image, { StaticImageData } from "next/image";
 import { useEffect, useState } from "react";
 import ShortPreview from "./ShortPreview";
-import Tags from "@/components/Tags";
 
 type ProjectCardProp = {
   index: number;
@@ -149,7 +148,13 @@ const ProjectCard: React.FC<ProjectCardProp> = ({
           </h3>
           <p className="mt-2 text-secondary text-[14px]">{description}</p>
         </div>
-        <Tags tags={tags} />
+        {/* <div className="mt-4 flex flex-wrap gap-2">
+          {tags.map((tag: { [key: string]: any }) => (
+            <p key={tag.name} className={`text-[14px] ${tag.color}`}>
+              #{tag.name}
+            </p>
+          ))}
+        </div> */}
       </Tilt>
     </motion.div>
   );
