@@ -34,26 +34,18 @@ const ShortPreview: React.FC<Prop> = ({ video, image }) => {
         <source src={video} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      {
-        isLoading && (
+      {isLoading && (
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-20">
           <ClimbingBoxLoader
             size={24}
             cssOverride={{ width: "100%", height: "100%" }}
             color="#050816"
           />
-          // <Image
-          //   src={image}
-          //   alt="website_preview"
-          //   className="w-full h-full object-cover rounded-2xl"
-          //   placeholder="blur"
-          // />
-        )
-        //  (
-        //   <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white">
-        //     Loading video...
-        //   </div>
-        // )
-      }
+          <p className="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-20 blue-text-gradient text-[16px]">
+            Loading preview
+          </p>
+        </div>
+      )}
     </div>
   );
 };
