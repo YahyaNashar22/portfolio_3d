@@ -34,14 +34,7 @@ const ProjectsMobileView: React.FC<props> = ({
   tags,
 }) => {
   return (
-    <Tilt
-      options={{
-        max: 45,
-        scale: 1,
-        speed: 450,
-      }}
-      className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full relative"
-    >
+    <div className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full relative">
       <div className="relative w-full h-[240px]">
         {isShortPreview && video && <ShortPreview video={video} />}
 
@@ -125,7 +118,7 @@ const ProjectsMobileView: React.FC<props> = ({
           </p>
         ))}
       </div>
-    </Tilt>
+    </div>
   );
 };
 
