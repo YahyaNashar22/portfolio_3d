@@ -37,7 +37,7 @@ const ProjectCard: React.FC<ProjectCardProp> = ({
 }) => {
   const [isShortPreview, setIsShortPreview] = useState<boolean>(false);
   const [isSmallScreen, setIsSmallScreen] = useState<boolean>(
-    window.innerWidth >= 1024 ? false : true
+    typeof window !== "undefined" && window.innerWidth >= 1024 ? false : true
   );
 
   useEffect(() => {
