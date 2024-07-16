@@ -11,7 +11,7 @@ import { fadeIn, textVariant } from "@/utils/motion";
 import Image, { StaticImageData } from "next/image";
 import { useEffect, useState } from "react";
 import ShortPreview from "./ShortPreview";
-import Tags from "./tags";
+import Tags from "@/components/Tags";
 
 type ProjectCardProp = {
   index: number;
