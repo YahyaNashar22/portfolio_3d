@@ -53,114 +53,114 @@ const ProjectCard: React.FC<ProjectCardProp> = ({
       return () => window.removeEventListener("resize", handleResize);
     }
   }, []);
-  return(
-    <div>test</div>
-  )
 
-  // return (
-  //   <motion.div
-  //     variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-  //     onHoverStart={() => {
-  //       if (!isSmallScreen && video) setIsShortPreview(true);
-  //     }}
-  //     onHoverEnd={() => setIsShortPreview(false)}
-  //   >
-  //     <Tilt
-  //       options={{
-  //         max: 45,
-  //         scale: 1,
-  //         speed: 450,
-  //       }}
-  //       className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full relative"
-  //     >
-  //       <div className="relative w-full h-[240px]">
-  //         {isShortPreview && video && <ShortPreview video={video} />}
+  return (
+    <motion.div
+      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+      onHoverStart={() => {
+        if (!isSmallScreen && video) setIsShortPreview(true);
+      }}
+      onHoverEnd={() => setIsShortPreview(false)}
+    >
+      <Tilt
+        options={{
+          max: 45,
+          scale: 1,
+          speed: 450,
+        }}
+        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full relative"
+      >
+        <div className="relative w-full h-[240px]">
+          {isShortPreview && video && (
+            // <ShortPreview video={video} />
+            <p>video</p>
+          )}
 
-  //         {!isShortPreview && (
-  //           <Image
-  //             src={image}
-  //             alt={name}
-  //             className="w-full h-full object-cover rounded-2xl"
-  //             placeholder="blur"
-  //           />
-  //         )}
+          {!isShortPreview && (
+            <Image
+              src={image}
+              alt={name}
+              className="w-full h-full object-cover rounded-2xl"
+              placeholder="blur"
+            />
+          )}
 
-  //         <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-  //           {/* Backend Github Repo Link */}
-  //           {source_code_link_back_end && (
-  //             <div
-  //               onClick={() => window.open(source_code_link_back_end, "_blank")}
-  //               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer relative z-[100]"
-  //             >
-  //               <Image
-  //                 src={github}
-  //                 alt="github_back_end"
-  //                 className="w-1/2 h-1/2 object-contain"
-  //               />
-  //               <span className="absolute top-0 right-0 bg-red-500 text-white rounded-full text-xs w-5 h-5 flex justify-center items-center">
-  //                 B
-  //               </span>
-  //             </div>
-  //           )}
-  //           {/* Frontend Github Repo Link */}
-  //           {source_code_link_front_end && (
-  //             <div
-  //               onClick={() =>
-  //                 window.open(source_code_link_front_end, "_blank")
-  //               }
-  //               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer relative z-[100]"
-  //             >
-  //               <Image
-  //                 src={github}
-  //                 alt="github_front_end"
-  //                 className="w-1/2 h-1/2 object-contain"
-  //               />
-  //               <span className="absolute top-0 right-0 bg-yellow-500 text-white rounded-full text-xs w-5 h-5 flex justify-center items-center">
-  //                 F
-  //               </span>
-  //             </div>
-  //           )}
-  //           {/* Live Website Preview Link */}
-  //           {live_link && (
-  //             <div
-  //               onClick={() => window.open(live_link, "_blank")}
-  //               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer relative z-[100]"
-  //             >
-  //               <Image
-  //                 src={live_globe}
-  //                 alt="live_preview"
-  //                 className="w-1/2 h-1/2 object-contain"
-  //               />
-  //               <span className="absolute top-0 right-0 bg-green-500 text-white rounded-full text-xs w-5 h-5 flex justify-center items-center">
-  //                 L
-  //               </span>
-  //             </div>
-  //           )}
-  //         </div>
-  //       </div>
-  //       <div className="mt-5">
-  //         <h3>
-  //           {name}{" "}
-  //           {isSmallScreen && video && (
-  //             <span className="float-end violet-gradient text-[14px] p-1.5 rounded-2xl">
-  //               <button onClick={() => setIsShortPreview(!isShortPreview)}>
-  //                 {isShortPreview ? "Stop preview" : "Watch preview"}
-  //               </button>
-  //             </span>
-  //           )}
-  //         </h3>
-  //         <p className="mt-2 text-secondary text-[14px]">{description}</p>
-  //       </div>
-  //       <div className="mt-4 flex flex-wrap gap-2">
-  //         {tags.map((tag) => (
-  //           <p key={tag.name} className={`text-[14px] ${tag.color}`}>
-  //             #{tag.name}
-  //           </p>
-  //         ))}
-  //       </div>
-  //     </Tilt>
-  //   </motion.div>
-  // );
+          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+            {/* Backend Github Repo Link */}
+            {source_code_link_back_end && (
+              <div
+                onClick={() => window.open(source_code_link_back_end, "_blank")}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer relative z-[100]"
+              >
+                <Image
+                  src={github}
+                  alt="github_back_end"
+                  className="w-1/2 h-1/2 object-contain"
+                />
+                <span className="absolute top-0 right-0 bg-red-500 text-white rounded-full text-xs w-5 h-5 flex justify-center items-center">
+                  B
+                </span>
+              </div>
+            )}
+            {/* Frontend Github Repo Link */}
+            {source_code_link_front_end && (
+              <div
+                onClick={() =>
+                  window.open(source_code_link_front_end, "_blank")
+                }
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer relative z-[100]"
+              >
+                <Image
+                  src={github}
+                  alt="github_front_end"
+                  className="w-1/2 h-1/2 object-contain"
+                />
+                <span className="absolute top-0 right-0 bg-yellow-500 text-white rounded-full text-xs w-5 h-5 flex justify-center items-center">
+                  F
+                </span>
+              </div>
+            )}
+            {/* Live Website Preview Link */}
+            {live_link && (
+              <div
+                onClick={() => window.open(live_link, "_blank")}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer relative z-[100]"
+              >
+                <Image
+                  src={live_globe}
+                  alt="live_preview"
+                  className="w-1/2 h-1/2 object-contain"
+                />
+                <span className="absolute top-0 right-0 bg-green-500 text-white rounded-full text-xs w-5 h-5 flex justify-center items-center">
+                  L
+                </span>
+              </div>
+            )}
+          </div>
+        </div>
+        <div className="mt-5">
+          <h3>
+            {name}{" "}
+            {isSmallScreen && video && (
+              <span className="float-end violet-gradient text-[14px] p-1.5 rounded-2xl">
+                <button onClick={() => setIsShortPreview(!isShortPreview)}>
+                  {isShortPreview ? "Stop preview" : "Watch preview"}
+                </button>
+              </span>
+            )}
+          </h3>
+          <p className="mt-2 text-secondary text-[14px]">{description}</p>
+        </div>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {tags.map((tag) => (
+            <p key={tag.name} className={`text-[14px] ${tag.color}`}>
+              #{tag.name}
+            </p>
+          ))}
+        </div>
+      </Tilt>
+    </motion.div>
+  );
 };
 
 const Works = () => {
