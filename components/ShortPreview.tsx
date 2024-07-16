@@ -2,6 +2,7 @@
 
 import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
+import { ClimbingBoxLoader } from "react-spinners";
 
 type Prop = {
   video: string;
@@ -35,11 +36,17 @@ const ShortPreview: React.FC<Prop> = ({ video, image }) => {
       </video>
       {
         isLoading && (
-          <Image
-            src={image}
-            alt="website_preview"
-            className="w-full h-full object-cover rounded-2xl"
+          <ClimbingBoxLoader
+            size={24}
+            cssOverride={{ width: "100%", height: "100%" }}
+            color="#050816"
           />
+          // <Image
+          //   src={image}
+          //   alt="website_preview"
+          //   className="w-full h-full object-cover rounded-2xl"
+          //   placeholder="blur"
+          // />
         )
         //  (
         //   <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white">

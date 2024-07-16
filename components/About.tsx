@@ -54,10 +54,12 @@ const About = () => {
       >
         I'm a skilled software developer with experience in TypeScript and
         JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js, Phaser.js and Flutter. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. I believe in the never ending road of learning, so I always work on improving my knowledge to deliver cutting edge technologies!
-        Let's work together to bring your ideas to life!
+        Three.js, Phaser.js and Flutter. I'm a quick learner and collaborate
+        closely with clients to create efficient, scalable, and user-friendly
+        solutions that solve real-world problems. I believe in the never ending
+        road of learning, so I always work on improving my knowledge to deliver
+        cutting edge technologies! Let's work together to bring your ideas to
+        life!
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

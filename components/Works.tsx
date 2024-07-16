@@ -80,6 +80,7 @@ const ProjectCard: React.FC<ProjectCardProp> = ({
               src={image}
               alt={name}
               className="w-full h-full object-cover rounded-2xl"
+              placeholder="blur"
             />
           )}
 
