@@ -1,10 +1,13 @@
 import Image, { StaticImageData } from "next/image";
 import { Tilt } from "react-tilt";
+import ShortPreview from "./ShortPreview";
 
 type props = {
   github: string | StaticImageData;
   live_globe: string | StaticImageData;
+  isSmallScreen: boolean;
   isShortPreview: boolean;
+  setIsShortPreview: (e: boolean) => void;
   name: string;
   video?: string;
   image: string | StaticImageData;
@@ -16,7 +19,9 @@ type props = {
 };
 
 const ProjectsMobileView: React.FC<props> = ({
+  isSmallScreen,
   isShortPreview,
+  setIsShortPreview,
   video,
   image,
   name,
@@ -38,13 +43,16 @@ const ProjectsMobileView: React.FC<props> = ({
       className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full relative"
     >
       <div className="relative w-full h-[240px]">
-        <Image
-          src={image}
-          alt={name}
-          className="w-full h-full object-cover rounded-2xl"
-          placeholder="blur"
-        />
+        {isShortPreview && video && <ShortPreview video={video} />}
 
+        {!isShortPreview && (
+          <Image
+            src={image}
+            alt={name}
+            className="w-full h-full object-cover rounded-2xl"
+            placeholder="blur"
+          />
+        )}
         <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
           {/* Backend Github Repo Link */}
           {source_code_link_back_end && (
@@ -97,7 +105,17 @@ const ProjectsMobileView: React.FC<props> = ({
         </div>
       </div>
       <div className="mt-5">
-        <h3>{name}</h3>
+        <h3>
+          {" "}
+          {name}{" "}
+          {isSmallScreen && video && (
+            <span className="float-end violet-gradient text-[14px] p-1.5 rounded-2xl">
+              <button onClick={() => setIsShortPreview(!isShortPreview)}>
+                {isShortPreview ? "Stop preview" : "Watch preview"}
+              </button>
+            </span>
+          )}
+        </h3>
         <p className="mt-2 text-secondary text-[14px]">{description}</p>
       </div>
       <div className="mt-4 flex flex-wrap gap-2">

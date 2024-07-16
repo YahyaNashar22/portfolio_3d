@@ -50,8 +50,11 @@ const ProjectCard: React.FC<ProjectCardProp> = ({
     };
     if (typeof window !== "undefined") {
       handleResize();
+      window.addEventListener("resize", handleResize);
+
+      return () => window.removeEventListener("resize", handleResize);
     }
-  }, []);
+  }, [window]);
 
   return (
     <motion.div
@@ -77,7 +80,9 @@ const ProjectCard: React.FC<ProjectCardProp> = ({
         />
       ) : (
         <ProjectsMobileView
+          isSmallScreen={isSmallScreen}
           isShortPreview={isShortPreview}
+          setIsShortPreview={setIsShortPreview}
           video={video}
           image={image}
           name={name}
