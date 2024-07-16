@@ -39,7 +39,9 @@ const ProjectsDesktopView: React.FC<props> = ({
       className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full relative"
     >
       <div className="relative w-full h-[240px]">
-        {isShortPreview && video && <ShortPreview video={video} />}
+        {isShortPreview && video && (
+          <ShortPreview video={video} name={name} image={image} />
+        )}
 
         {!isShortPreview && (
           <Image

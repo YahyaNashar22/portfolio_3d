@@ -1,13 +1,15 @@
 "use client";
 
+import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
-import { ClimbingBoxLoader } from "react-spinners";
 
 type Prop = {
   video: string;
+  name: string;
+  image: string | StaticImageData;
 };
 
-const ShortPreview: React.FC<Prop> = ({ video }) => {
+const ShortPreview: React.FC<Prop> = ({ video, name, image }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   const handleLoadedData = () => {
@@ -34,10 +36,11 @@ const ShortPreview: React.FC<Prop> = ({ video }) => {
       </video>
       {isLoading && (
         <div className="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-20">
-          <ClimbingBoxLoader
-            size={24}
-            cssOverride={{ width: "100%", height: "100%" }}
-            color="#050816"
+          <Image
+            src={image}
+            alt={name}
+            className="w-full h-full object-cover rounded-2xl"
+            placeholder="blur"
           />
           <p className="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-20 blue-text-gradient text-[16px]">
             Loading preview

@@ -36,26 +36,25 @@ const ProjectCard: React.FC<ProjectCardProp> = ({
   live_link,
 }) => {
   const [isShortPreview, setIsShortPreview] = useState<boolean>(false);
-  const [isSmallScreen, setIsSmallScreen] = useState<boolean>(true);
-  // const [isSmallScreen, setIsSmallScreen] = useState<boolean>(
-  //   typeof window !== "undefined" && window.innerWidth >= 1024 ? false : true
-  // );
+  const [isSmallScreen, setIsSmallScreen] = useState<boolean>(
+    typeof window !== "undefined" && window.innerWidth >= 1024 ? false : true
+  );
 
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     if (window.innerWidth >= 1024) {
-  //       setIsSmallScreen(false);
-  //     } else {
-  //       setIsSmallScreen(true);
-  //     }
-  //   };
-  //   if (typeof window !== "undefined") {
-  //     handleResize();
-  //     window.addEventListener("resize", handleResize);
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setIsSmallScreen(false);
+      } else {
+        setIsSmallScreen(true);
+      }
+    };
+    if (typeof window !== "undefined") {
+      handleResize();
+      window.addEventListener("resize", handleResize);
 
-  //     return () => window.removeEventListener("resize", handleResize);
-  //   }
-  // }, []);
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
 
   return (
     <motion.div

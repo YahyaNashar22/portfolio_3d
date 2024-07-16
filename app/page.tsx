@@ -8,7 +8,6 @@ import Hero from "@/components/Hero";
 import StarsCanvas from "@/components/canvas/StarsCanvas";
 import Tech from "@/components/Tech";
 import Works from "@/components/Works";
-import ProjectsViewer from "@/components/ProjectsViewer";
 
 const Home = () => {
   return (
@@ -19,7 +18,7 @@ const Home = () => {
       <About />
       <Experience />
       <Tech />
-      <ProjectsViewer />
+      <Works />
       <FeedBacks />
       <section className="relative z-0">
         <Contact />
