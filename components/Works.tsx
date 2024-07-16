@@ -36,7 +36,9 @@ const ProjectCard: React.FC<ProjectCardProp> = ({
   live_link,
 }) => {
   const [isShortPreview, setIsShortPreview] = useState<boolean>(false);
-  const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
+  const [isSmallScreen, setIsSmallScreen] = useState<boolean>(
+    window.innerWidth >= 1024 ? false : true
+  );
 
   useEffect(() => {
     const handleResize = () => {
