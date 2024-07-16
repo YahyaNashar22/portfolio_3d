@@ -50,9 +50,6 @@ const ProjectCard: React.FC<ProjectCardProp> = ({
     };
     if (typeof window !== "undefined") {
       handleResize();
-      window.addEventListener("resize", handleResize);
-
-      return () => window.removeEventListener("resize", handleResize);
     }
   }, []);
 
@@ -64,7 +61,7 @@ const ProjectCard: React.FC<ProjectCardProp> = ({
       }}
       onHoverEnd={() => setIsShortPreview(false)}
     >
-      {/* {!isSmallScreen ? (
+      {!isSmallScreen ? (
         <ProjectsDesktopView
           isShortPreview={isShortPreview}
           video={video}
@@ -78,21 +75,21 @@ const ProjectCard: React.FC<ProjectCardProp> = ({
           description={description}
           tags={tags}
         />
-      ) : ( */}
-      <ProjectsMobileView
-        isShortPreview={isShortPreview}
-        video={video}
-        image={image}
-        name={name}
-        source_code_link_back_end={source_code_link_back_end}
-        github={github}
-        source_code_link_front_end={source_code_link_front_end}
-        live_link={live_link}
-        live_globe={live_globe}
-        description={description}
-        tags={tags}
-      />
-      {/* )} */}
+      ) : (
+        <ProjectsMobileView
+          isShortPreview={isShortPreview}
+          video={video}
+          image={image}
+          name={name}
+          source_code_link_back_end={source_code_link_back_end}
+          github={github}
+          source_code_link_front_end={source_code_link_front_end}
+          live_link={live_link}
+          live_globe={live_globe}
+          description={description}
+          tags={tags}
+        />
+      )}
     </motion.div>
   );
 };
