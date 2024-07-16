@@ -148,13 +148,13 @@ const ProjectCard: React.FC<ProjectCardProp> = ({
           </h3>
           <p className="mt-2 text-secondary text-[14px]">{description}</p>
         </div>
-        {/* <div className="mt-4 flex flex-wrap gap-2">
+        <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag: { [key: string]: any }) => (
             <p key={tag.name} className={`text-[14px] ${tag.color}`}>
               #{tag.name}
             </p>
           ))}
-        </div> */}
+        </div>
       </Tilt>
     </motion.div>
   );
@@ -162,13 +162,13 @@ const ProjectCard: React.FC<ProjectCardProp> = ({
 
 const Works = () => {
   return (
-    <>
+    <section>
       <motion.div variants={textVariant(0.1)}>
         <p className={styles.sectionSubText}>My work</p>
         <h2 className={styles.sectionHeadText}>Projects.</h2>
       </motion.div>
 
-      <div className="w-full flex">
+      <div className="w-full flex flex-wrap">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
@@ -186,7 +186,7 @@ const Works = () => {
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
-    </>
+    </section>
   );
 };
 
