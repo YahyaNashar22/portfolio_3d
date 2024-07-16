@@ -162,7 +162,7 @@ const ProjectCard: React.FC<ProjectCardProp> = ({
       ) : (
         <div className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full relative">
           <div className="relative w-full h-[240px]">
-            {isShortPreview && video && <ShortPreview video={video} />}
+            {/* {isShortPreview && video && <ShortPreview video={video} />}
 
             {!isShortPreview && (
               <Image
@@ -171,7 +171,7 @@ const ProjectCard: React.FC<ProjectCardProp> = ({
                 className="w-full h-full object-cover rounded-2xl"
                 placeholder="blur"
               />
-            )}
+            )} */}
 
             <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
               {/* Backend Github Repo Link */}
