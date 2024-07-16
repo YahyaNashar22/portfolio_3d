@@ -71,9 +71,7 @@ const ProjectCard: React.FC<ProjectCardProp> = ({
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full relative"
       >
         <div className="relative w-full h-[240px]">
-          {isShortPreview && video && (
-            <ShortPreview video={video} image={image} />
-          )}
+          {isShortPreview && video && <ShortPreview video={video} />}
 
           {!isShortPreview && (
             <Image

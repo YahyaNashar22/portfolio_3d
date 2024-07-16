@@ -1,15 +1,13 @@
 "use client";
 
-import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
 import { ClimbingBoxLoader } from "react-spinners";
 
 type Prop = {
   video: string;
-  image: StaticImageData;
 };
 
-const ShortPreview: React.FC<Prop> = ({ video, image }) => {
+const ShortPreview: React.FC<Prop> = ({ video }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   const handleLoadedData = () => {
