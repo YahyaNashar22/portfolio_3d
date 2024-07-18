@@ -32,8 +32,24 @@ const Contact = () => {
     });
   };
 
+  const validateForm = () => {
+    return form.name !== "" && form.email !== "" && form.message !== "";
+  };
+
   const handleSubmit = (e: any) => {
     e.preventDefault();
+
+    if (!validateForm()) {
+      toast.error("Please fill in all fields.", {
+        style: {
+          borderRadius: "10px",
+          background: "#333",
+          color: "#fff",
+        },
+      });
+      return;
+    }
+
     setLoading(true);
 
     emailjs
