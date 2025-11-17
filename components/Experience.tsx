@@ -14,19 +14,28 @@ type prop = {
 
 const ExperienceCard: React.FC<prop> = ({ experience }) => {
   return (
-    <section className="flex flex-col md:flex-row gap-y-10 items-center justify-start my-4 bg-[#1d1836] p-10 border-b-[3px] border-white">
-      <Image
-        src={experience.icon}
-        alt={experience.company_name}
-        className="w-[60%] h-[60%] object-contain"
-      />
-      <div className="flex flex-col items-start justify-between gap-2">
+    <section className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-10 my-4 bg-[#1d1836] p-10 border-b-[3px] border-white">
+      {/* Fixed-size icon */}
+      <div className="flex-shrink-0">
+        <Image
+          src={experience.icon}
+          alt={experience.company_name}
+          width={260}
+          height={260}
+          className="object-contain"
+        />
+      </div>
+
+      {/* Text content */}
+      <div className="flex flex-col gap-3 max-w-[85%]">
         <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
+
         <p className="text-secondary text-[16px] font-semibold m-0">
           {experience.company_name}
         </p>
-        <ul className="mt-5 list-disc ml-5 space-y-2">
-          {experience.points.map((point: string, index: string) => (
+
+        <ul className="mt-2 list-disc ml-5 space-y-2">
+          {experience.points.map((point: string, index: number) => (
             <li
               key={`experience-point-${index}`}
               className="text-white-100 text-[14px] pl-1 tracking-wider"
@@ -35,6 +44,7 @@ const ExperienceCard: React.FC<prop> = ({ experience }) => {
             </li>
           ))}
         </ul>
+
         <p className="text-secondary text-[16px] font-semibold m-0">
           {experience.date}
         </p>
@@ -52,16 +62,18 @@ const Experience = () => {
       </motion.div>
       <div className="mt-20 flex flex-col">
         <div>
-          {experiences.map((experience, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-            >
-              <ExperienceCard experience={experience} />
-            </motion.div>
-          ))}
+          {experiences
+            .map((experience, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+              >
+                <ExperienceCard experience={experience} />
+              </motion.div>
+            ))
+            .reverse()}
         </div>
       </div>
     </>

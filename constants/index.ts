@@ -18,12 +18,22 @@ import reactjs from "@/public/assets/tech/reactjs.png";
 import threejs from "@/public/assets/tech/threejs.svg";
 
 import ostories from "@/public/assets/company/ostories-logo.png";
+import codi from "@/public/assets/company/codi_logo.png";
+import prodigy from "@/public/assets/company/prodigy_logo.png";
+import bepro from "@/public/assets/company/bepro_logo.png";
+import nexrush from "@/public/assets/company/nexrush_logo.png";
+import frequenc from "@/public/assets/company/frequenc_logo.png";
 
 import croton from "@/public/assets/croton.png";
 import metaverse_threeJS from "@/public/assets/metaverse_threeJS.png";
 import store_4g from "@/public/assets/store-4g.png";
 import promptopia from "@/public/assets/promptopia.png";
 import globalFairy from "@/public/assets/globalFairy.png";
+import ycDirectory from "@/public/assets/yc_directory.png";
+import animeVault from "@/public/assets/animeVault.png";
+import kaisa from "@/public/assets/kaisa.png";
+import teachHappily from "@/public/assets/teachHappily.png";
+import takatuf from "@/public/assets/takatuf.png";
 
 import yahya from "@/public/assets/yahya.png";
 
@@ -86,19 +96,92 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Full Stack MERN Developer",
+    title: "Full Stack Web Development Apprentice",
+    company_name: "Codi Tech",
+    icon: codi,
+    iconBg: "#383E56",
+    date: "August 2023 - March 2024",
+    points: [
+      "Contributed to building and maintaining web applications using the MERN stack (React.js, Node.js, MongoDB).",
+      "Collaborated with a cross-functional team throughout the development lifecycle.",
+      "Strengthened English communication and key soft skills including time management, agile methodology, conflict resolution, problem solving, and leadership.",
+      "Participated in all stages of SDLC to ensure the delivery of high-quality software.",
+      "Managed multiple projects simultaneously while meeting deadlines.",
+    ],
+  },
+  {
+    title: "Full Stack Web Developer",
     company_name: "Ostories",
     icon: ostories,
     iconBg: "#383E56",
-    date: "March 2024 - July 2021",
+    date: "March 2024 - July 2024",
     points: [
-      "Developing and maintaining web applications using React.js, Node.js and other related technologies.",
-      "Design renovation.",
-      "Optimize previously build services to ensure better performance.",
-      "Build and implement newly requested services.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-      "Debug others code and find solutions for existing problems.",
+      "Developed and maintained an Accounts Management System.",
+      "Optimized existing services to improve stability and performance.",
+      "Built and implemented new features and required services.",
+      "Managed MongoDB databases and ensured data accuracy and security.",
+      "Debugged legacy code and resolved system issues.",
+      "Contributed to overall product design renovations and improvements.",
+    ],
+  },
+  {
+    title: "Full Stack Web Developer (Internship)",
+    company_name: "Prodigy Info Tech",
+    icon: prodigy,
+    iconBg: "#383E56",
+    date: "September 2024",
+    points: [
+      "Developed five complete projects as part of an intensive internship program.",
+      "Built a full Authentication and Authorization System.",
+      "Created an Employee Management Dashboard.",
+      "Developed a full-featured E-Commerce platform.",
+      "Built a real-time Web Chat Application.",
+      "Developed an online Social Media Platform.",
+    ],
+  },
+  {
+    title: "Full Stack Web Developer",
+    company_name: "Bepro Agency",
+    icon: bepro,
+    iconBg: "#383E56",
+    date: "August 2024 - Present",
+    points: [
+      "Delivered project-based solutions tailored to specific client needs.",
+      "Built, deployed, and managed websites and custom platforms.",
+      "Conducted client meetings to analyze and refine business requirements.",
+      "Designed prototypes and UI concepts using Figma.",
+      "Managed GitHub repositories and maintained clean development workflow.",
+    ],
+  },
+  {
+    title: "Full Stack Web Developer",
+    company_name: "Nexrush Agency",
+    icon: nexrush,
+    iconBg: "#383E56",
+    date: "January 2025 - September 2025",
+    points: [
+      "Worked on a wide range of projects across multiple technologies and stacks.",
+      "Developed and customized WordPress plugins using PHP.",
+      "Built WordPress websites with Elementor and Divi Builder.",
+      "Worked on mobile applications using Flutter (restaurant and social media apps).",
+      "Developed backend services with NestJS and ExpressJS.",
+      "Built frontend interfaces using ReactJS and standard web technologies (HTML, CSS, JS).",
+    ],
+  },
+  {
+    title: "Full Stack Web Developer",
+    company_name: "FrequenC",
+    icon: frequenc,
+    iconBg: "#383E56",
+    date: "June 2025 - Present",
+    points: [
+      "Contributed to the company's main multi-function website (chatting, event management, and more).",
+      "Developed mobile application features including ticketing, live chat, and team management.",
+      "Handled AWS EC2 deployments and integrated S3 for file storage.",
+      "Implemented a microservices architecture for scalable performance.",
+      "Reviewed and optimized codebase for maintainability and efficiency.",
+      "Integrated payment, email, and SMS providers (Stripe, Twilio, SendGrid).",
+      "Built advanced editor functionalities for templates and style customization.",
     ],
   },
 ];
@@ -257,6 +340,125 @@ const projects = [
       "https://github.com/YahyaNashar22/Global-Fairy-front-end",
     source_code_link_back_end:
       "https://github.com/YahyaNashar22/Global-Fairy-back-end",
+  },
+  {
+    name: "YC Directory",
+    description:
+      "An online platform offering project-based learning for web developers, aimed at leveling up junior to mid-level developers by focusing on real-world applications.",
+    tags: [
+      {
+        name: "MERN",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Tailwind",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "NextJS",
+        color: "green-text-gradient",
+      },
+    ],
+    image: ycDirectory,
+    source_code_link_front_end: "https://github.com/YahyaNashar22/yc_directory",
+    live_link: "https://yc-directory-one.vercel.app/",
+  },
+  {
+    name: "Anime Vault",
+    description: "Your favorite anime, all in one place.",
+    tags: [
+      {
+        name: "Framer Motion",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "NextJS",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Tailwind",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Infinite Scroll",
+        color: "green-text-gradient",
+      },
+    ],
+    image: animeVault,
+    source_code_link_front_end: "https://github.com/YahyaNashar22/anime_vault",
+    live_link: "https://anime-vault-seven-lemon.vercel.app/",
+  },
+  {
+    name: "KAISA",
+    description:
+      "Find Your Space. Live Your Vision. Explore premium homes, smart investments, and stunning properties—all in one place.",
+    tags: [
+      {
+        name: "Wordpress",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Elementor",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "LottieFiles",
+        color: "blue-text-gradient",
+      },
+    ],
+    video: "/assets/video/kaisa_vid.mp4",
+    image: kaisa,
+    live_link: "https://gorgeous-malabi-08745a.netlify.app/",
+  },
+  {
+    name: "Teach Happily",
+    description:
+      "في علّم بسعادة, نقدّم لكم مجموعة واسعة من الدّورات التّدريبية التي تهدف إلى تطوير مهارات المعلّمين وتعزيز قدرتهم على تقديم تعليم متميز.",
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Mongo",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Express",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Payment Solutions",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: teachHappily,
+    live_link: "https://teachhappily.qa/",
+  },
+  {
+    name: "Takatuf",
+    description:
+      "في علّم بسعادة, نقدّم لكم مجموعة واسعة من الدّورات التّدريبية التي تهدف إلى تطوير مهارات المعلّمين وتعزيز قدرتهم على تقديم تعليم متميز.",
+    tags: [
+      {
+        name: "MERN",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "CPanel Deployment",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Payment Solutions",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Payment Solutions",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: takatuf,
+    live_link: "https://takatof.beproagency.com/",
   },
 ];
 

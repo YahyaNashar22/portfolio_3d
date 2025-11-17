@@ -57,14 +57,13 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js, Phaser.js and Flutter. I'm a quick learner and collaborate
-        closely with clients to create efficient, scalable, and user-friendly
-        solutions that solve real-world problems. I believe in the never ending
-        road of learning, so I always work on improving my knowledge to deliver
-        cutting edge technologies! Let's work together to bring your ideas to
-        life!
+        I am a committed and innovative full stack engineer, I thrive to create
+        new applications, wether it is on the web, desktop, or cross platform
+        mobile devices. I am not a “Frameworker” , I am a “Developer” , hence
+        you will find that I utilize many different technologies to build my
+        applications and I am not tied to a single framework. I always like to
+        learn new technologies, and discover other ways to create different
+        systems and programs.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
